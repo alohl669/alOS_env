@@ -20,7 +20,7 @@ FeaturesN: Each section of the document
 
 
 ### References and links of interest
-Inspired by the work of Marcelo Vazquez(aka S4vitar)
-Links youtube
-link github
-link github ficheros
+**Inspired by the work of Marcelo Vazquez(aka S4vitar)**  
+Links youtube  
+link github  
+link github ficheros  
