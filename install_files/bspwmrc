@@ -1,0 +1,27 @@
+#! /bin/sh
+#xrandr --size 1920x1080
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+compton --config /home/alohl669/.config/compton/compton.conf &
+wname L3GD &
+feh --bg-fill /home/alohl669/Desktop/alohl669/Images/Wallpaper.png &
+~/.config/polybar/launch.sh &
+killall mate-notification-daemon; dunst &
+
+bspc config pointer_modifier mod1
+
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Caja state=floating follow=on
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
