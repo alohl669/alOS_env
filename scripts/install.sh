@@ -12,13 +12,17 @@ InstallBspwm () {
     # creamos directorios de cofiguración
     mkdir -p $HOME/.config/{bspwm,sxhkd}
     # copiamos ficheros de configuración
+    sed -i "s|usuario|$USER|g" $HOME/.alOS/alOS_env/install_files/bspwmrc 
+    sed -i "s|usuario|$USER|g" $HOME/.alOS/alOS_env/install_files/sxhkdrc
     cp $HOME/.alOS/alOS_env/install_files/bspwmrc $HOME/.config/bspwm/
     cp $HOME/.alOS/alOS_env/install_files/sxhkdrc $HOME/.config/sxhkd/
+    mkdir $HOME/.config/bspwm/scripts/
     cp $HOME/.alOS/alOS_env/install_files/bspwm_resize $HOME/.config/bspwm/scripts/
     chmod u+x $HOME/.config/bspwm/bspwmrc
-    echo "sxhkd &" >> $HOME/.xinitrc
-    echo "exec bspwm" >> $HOME/.xinitrc
-    # TODO: faltan los SED al usuario en los archivos de configuracion
+    echo "sxhkd &" >> $HOME/.xinitrc # o .xprofile
+    echo "exec bspwm" >> $HOME/.xinitrc # o .xprofile
+    # TODO: discernir entre .xinitrc y .xprofile
+    # TODO: enm sxhkdrc para ubuntu mate hay que cambiar gnome terminal por mate-terminal
 }
 
 InstallComptonFeh () {
@@ -93,6 +97,7 @@ InstallPolybarTheme () {
     # to avoid deletions we will make a backup
     sudo cp /etc/fonts/conf.d/70-no-bitmaps.conf /etc/fonts/conf.d/70-no-bitmaps.bak
     sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
+    mkdir $HOME/.config/polybar
     cp -r * $HOME/.config/polybar
     chmod +x $HOME/.config/polybar/launch.sh
     
@@ -148,4 +153,4 @@ InstallDunst
 InstallPolybar
 InstallPolybarTheme
 installHackNerdFonts
-sudo kill -9 -1
+kill -9 -1

@@ -1,10 +1,10 @@
 #! /bin/sh
-#xrandr --size 1920x1080
+xrandr --size 1920x1080
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-compton --config /home/alohl669/.config/compton/compton.conf &
+compton --config /home/usuario/.config/compton/compton.conf &
 wname L3GD &
-feh --bg-fill /home/alohl669/.alOS/pictures/Wallpaper.png &
+feh --bg-fill /home/usuario/.alOS/pictures/Wallpaper.png &
 ~/.config/polybar/launch.sh &
 killall mate-notification-daemon; dunst &
 
