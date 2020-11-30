@@ -16,7 +16,7 @@ sudo apt-get install -y curl
 And just type.
 
 ```
-curl -f https://raw.githubusercontent.com/alohl669/alOS_env/feature_pre-production/alOS_env_Install.sh
+curl -f https://raw.githubusercontent.com/alohl669/alOS_env/master/alOS_env_Install.sh > alOS_env_Install.sh && bash alOS_env_Install.sh
 ```
 
 Features2: Each section of the document  
