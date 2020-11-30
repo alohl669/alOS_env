@@ -121,6 +121,18 @@ InstallPolybarTheme () {
     read nullvar
 }
 
+installHackNerdFonts () {
+    cd $HOME/.alOS/alOS_env/install_files
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+    sudo cp Hack.zip /usr/local/share/fonts/
+    cd /usr/local/share/fonts/
+    unzip Hack.zip
+    rm Hack.zip
+    # TODO: falta hacer un tuto o docu sobre como poner la fuente en la terminal
+    # quizá provocar que sea la web de inicio de firefox
+}
+
+# Pide sudo
 # if [[ $(id -u) -ne 0 ]]; then
 #     # Comprobamos permisos root
 #     echo "You need to be a root(or sudo user) to install"
@@ -135,3 +147,5 @@ InstallRofi
 InstallDunst
 InstallPolybar
 InstallPolybarTheme
+installHackNerdFonts
+sudo kill -9 -1
