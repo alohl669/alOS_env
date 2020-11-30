@@ -8,7 +8,17 @@ The idea is based on the premise that the less you use the mouse, the more effic
 ### Table of contents:
 
 
-Features1: Each section of the document  
+### Install
+Before you start, you need to install certain packages.
+```
+sudo apt-get install -y curl
+```
+And just type.
+
+```
+curl -f https://raw.githubusercontent.com/alohl669/alOS_env/feature_pre-production/mainInstall.sh
+```
+
 Features2: Each section of the document  
 Features3: Each section of the document  
 Features4: Each section of the document  
