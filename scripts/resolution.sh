@@ -1,4 +1,5 @@
 #!/bin/bash
+# TODO: ATENCION LIGHTDM es compatible con parrot, sin embargo ubuntu mate usa lo mismo pero con otra configuracion, estudia lightdm
 InstallResolution () {
     # En algunas maquinas virtuales o equipos no se establece bien la resolución con bspwm
     # Podemos configurarlo ahora o puedes ejcutar tu mismo el script mas adelante
