@@ -149,6 +149,7 @@ installHackNerdFonts () {
     # TODO: buscar un tema compatible o la manera de conseguir ARK-Dark
     # ARK-Dark : Parrot
     # Ambiant-MATE-Dark : Ubuntu mate
+    # TODO: Caja rompebspwm
 }
 
 # Pide sudo
