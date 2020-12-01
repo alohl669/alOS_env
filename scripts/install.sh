@@ -19,10 +19,9 @@ InstallBspwm () {
     mkdir $HOME/.config/bspwm/scripts/
     cp $HOME/.alOS/alOS_env/install_files/bspwm_resize $HOME/.config/bspwm/scripts/
     chmod u+x $HOME/.config/bspwm/bspwmrc
-    echo "sxhkd &" >> $HOME/.xinitrc # o .xprofile
-    echo "exec bspwm" >> $HOME/.xinitrc # o .xprofile
+    echo "sxhkd &" >> $HOME/.xprofile # o .xinitrc
+    echo "exec bspwm" >> $HOME/.xprofile # o .xinitrc
     # TODO: discernir entre .xinitrc y .xprofile
-    # TODO: enm sxhkdrc para ubuntu mate hay que cambiar gnome terminal por mate-terminal
 }
 
 InstallComptonFeh () {
@@ -46,7 +45,7 @@ InstallResolutionMSG () {
     echo ""
     echo -n "Do you want to set the screen resolution now?[y/N]: "
     read Answer
-    if [[ $Answer = ['Y','y'] ]]; then
+    if [[ $Answer = [Yy] ]]; then
         InstallResolution
     else
         echo "Ok, remember that later you can configure the resolution with the following command:"
@@ -133,8 +132,13 @@ installHackNerdFonts () {
     cd /usr/local/share/fonts/
     sudo unzip Hack.zip
     sudo rm Hack.zip
-    # TODO: falta hacer un tuto o docu sobre como poner la fuente en la terminal
-    # quizá provocar que sea la web de inicio de firefox
+    dconf write /org/mate/terminal/profiles/default/font "'Hack Nerd Font Mono 12'"
+    dconf write /org/mate/terminal/profiles/default/default-show-menubar false
+    dconf write /org/mate/terminal/profiles/default/silent-bell true
+    dconf write /org/mate/terminal/profiles/default/allow-bold false
+    dconf write /org/mate/terminal/profiles/default/title "'alOS Terminal'"
+    dconf write /org/mate/terminal/profiles/default/background-color "'#000000000000'"
+    dconf write /org/mate/terminal/profiles/default/foreground-color "'#88888A8A8585'"
 }
 
 # Pide sudo
