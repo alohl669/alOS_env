@@ -139,6 +139,8 @@ installHackNerdFonts () {
     dconf write /org/mate/terminal/profiles/default/title "'alOS Terminal'"
     dconf write /org/mate/terminal/profiles/default/background-color "'#000000000000'"
     dconf write /org/mate/terminal/profiles/default/foreground-color "'#88888A8A8585'"
+    dconf write /org/mate/terminal/profiles/default/use-system-font false
+    dconf write /org/mate/terminal/profiles/default/use-theme-colors false
 }
 
 # Pide sudo
