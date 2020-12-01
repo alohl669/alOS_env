@@ -145,7 +145,7 @@ installHackNerdFonts () {
     dconf write /org/mate/terminal/profiles/default/use-system-font false
     dconf write /org/mate/terminal/profiles/default/use-theme-colors false
     # dconf write /org/mate/desktop/interface/gtk-theme "'ARK-Dark'"
-    dconf write /org/mate/desktop/interface/gtk-theme "'Ambiant-MATE-Dark'"
+    # dconf write /org/mate/desktop/interface/gtk-theme "'Ambiant-MATE-Dark'"
     # TODO: buscar un tema compatible o la manera de conseguir ARK-Dark
     # ARK-Dark : Parrot
     # Ambiant-MATE-Dark : Ubuntu mate
