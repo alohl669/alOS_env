@@ -48,6 +48,9 @@ InstallResolutionMSG () {
     if [[ $Answer = [Yy] ]]; then
         InstallResolution
     else
+        echo ""
+        echo "--------------------------"
+        echo ""
         echo "Ok, remember that later you can configure the resolution with the following command:"
         echo ". $HOME/.alOS/alOS_env/scripts/resolution.sh && InstallResolution"
         echo ""
@@ -115,7 +118,7 @@ InstallPolybarTheme () {
     # TODO: Añadir modulo y script de ip publica
 
     echo ""
-    echo "We have installed our own theme for the polybar, if you want to change its appearance you can use the following link"
+    echo "We have installed our own theme modification for the polybar, if you want to change its appearance you can use the following link"
     echo "https://github.com/adi1090x/polybar-themes"
     echo ""
     echo "Or run the following script later"
@@ -141,6 +144,11 @@ installHackNerdFonts () {
     dconf write /org/mate/terminal/profiles/default/foreground-color "'#88888A8A8585'"
     dconf write /org/mate/terminal/profiles/default/use-system-font false
     dconf write /org/mate/terminal/profiles/default/use-theme-colors false
+    # dconf write /org/mate/desktop/interface/gtk-theme "'ARK-Dark'"
+    dconf write /org/mate/desktop/interface/gtk-theme "'Ambiant-MATE-Dark'"
+    # TODO: buscar un tema compatible o la manera de conseguir ARK-Dark
+    # ARK-Dark : Parrot
+    # Ambiant-MATE-Dark : Ubuntu mate
 }
 
 # Pide sudo
