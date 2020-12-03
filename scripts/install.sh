@@ -108,14 +108,11 @@ InstallPolybarTheme () {
     # SED
     # -- modulo de usuario
     cd $HOME/.config/polybar
-    sed -i "s|usuario|$USER|g" config.ini
-    mv $HOME/.config/bin/usuario.sh $HOME/.config/bin/$USER.sh
-    sed -i "s|usuario|$USER|g" $HOME/.config/bin/$USER.sh
+    # sed -i "s|usuario|$USER|g" config.ini
+    # mv $HOME/.config/bin/usuario.sh $HOME/.config/bin/$USER.sh
+    # sed -i "s|usuario|$USER|g" $HOME/.config/bin/$USER.sh
     ethIface=$(/usr/sbin/ifconfig | sed -n 1p | cut -d ":" -f 1)
     sed -i "s|ETHIFACE|$ethIface|g" $HOME/.config/bin/ethernet_status.sh
-    # TODO: falta Cambiar el icono de hack the box por el de openvpn
-    # TODO: falta Cambiar el icono de alohl669 por el de
-    # TODO: Añadir modulo y script de ip publica
 
     echo ""
     echo "We have installed our own theme modification for the polybar, if you want to change its appearance you can use the following link"
