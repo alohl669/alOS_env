@@ -170,3 +170,4 @@ InstallDunst
 InstallPolybar
 InstallPolybarTheme
 installHackNerdFonts
+InstallEnviornment
