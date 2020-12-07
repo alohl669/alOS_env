@@ -150,6 +150,10 @@ installHackNerdFonts () {
     # TODO: Caja rompebspwm
 }
 
+InstallEnviornment () {
+    sudo apt-get install -y gdm3 mate-desktop-environment-core
+}
+
 # Pide sudo
 # if [[ $(id -u) -ne 0 ]]; then
 #     # Comprobamos permisos root
@@ -166,4 +170,3 @@ InstallDunst
 InstallPolybar
 InstallPolybarTheme
 installHackNerdFonts
-kill -9 -1

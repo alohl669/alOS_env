@@ -7,8 +7,8 @@ read installGitAnswer
 if [[ $installGitAnswer = [Yy] || $installGitAnswer = '' ]]; then
     # install basics
     sudo apt-get install -y build-essential git net-tools
-    # install display/desktop basics
-    sudo apt-get install -y xorg mate-desktop-environment-core gdm3
+    # install xorg
+    sudo apt-get install -y xorg
 else
     echo "ok, bye"
     exit 1
