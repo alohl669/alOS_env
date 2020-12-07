@@ -1,5 +1,9 @@
 #!/bin/bash
 # post installation script to theming configure
+# primero configuramos la terminal, 
+# despues descargamos e instlamos la theme de mate que quede bien oscura para acja
+# Por ultimo instalamos la theme de rofi
+# hay que encontrar el modo de hacer el ejecutable al arranque de la session x
 systemThemeConfigure () {
     dconf write /org/mate/terminal/profiles/default/font "'Hack Nerd Font Mono 12'"
     dconf write /org/mate/terminal/profiles/default/default-show-menubar false
