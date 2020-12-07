@@ -163,6 +163,7 @@ InstallEnviornment () {
 # fi
 
 InstallBspwm
+InstallEnviornment
 InstallComptonFeh
 # InstallResolution
 # InstallResolutionMSG
@@ -171,4 +172,3 @@ InstallDunst
 InstallPolybar
 InstallPolybarTheme
 installHackNerdFonts
-InstallEnviornment
