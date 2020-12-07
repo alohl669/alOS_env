@@ -129,26 +129,11 @@ InstallPolybarTheme () {
 
 installHackNerdFonts () {
     cd $HOME/.alOS/alOS_env/install_files
-    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+    # wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
     sudo cp Hack.zip /usr/local/share/fonts/
     cd /usr/local/share/fonts/
     sudo unzip Hack.zip
     sudo rm Hack.zip
-    dconf write /org/mate/terminal/profiles/default/font "'Hack Nerd Font Mono 12'"
-    dconf write /org/mate/terminal/profiles/default/default-show-menubar false
-    dconf write /org/mate/terminal/profiles/default/silent-bell true
-    dconf write /org/mate/terminal/profiles/default/allow-bold false
-    dconf write /org/mate/terminal/profiles/default/title "'alOS Terminal'"
-    dconf write /org/mate/terminal/profiles/default/background-color "'#000000000000'"
-    dconf write /org/mate/terminal/profiles/default/foreground-color "'#88888A8A8585'"
-    dconf write /org/mate/terminal/profiles/default/use-system-font false
-    dconf write /org/mate/terminal/profiles/default/use-theme-colors false
-    # dconf write /org/mate/desktop/interface/gtk-theme "'ARK-Dark'"
-    # dconf write /org/mate/desktop/interface/gtk-theme "'Ambiant-MATE-Dark'"
-    # TODO: buscar un tema compatible o la manera de conseguir ARK-Dark
-    # ARK-Dark : Parrot
-    # Ambiant-MATE-Dark : Ubuntu mate
-    # TODO: Caja rompebspwm
 }
 
 InstallEnviornment () {
