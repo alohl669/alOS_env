@@ -16,4 +16,7 @@ systemThemeConfigure () {
     # ARK-Dark : Parrot
     # Ambiant-MATE-Dark : Ubuntu mate
     # TODO: Caja rompebspwm
+    echo "sxhkd &" > $HOME/.xprofile # o .xinitrc
+    echo "exec bspwm" >> $HOME/.xprofile # o .xinitrc
 }
+systemThemeConfigure

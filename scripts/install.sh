@@ -21,6 +21,7 @@ InstallBspwm () {
     chmod u+x $HOME/.config/bspwm/bspwmrc
     echo "sxhkd &" >> $HOME/.xprofile # o .xinitrc
     echo "exec bspwm" >> $HOME/.xprofile # o .xinitrc
+    echo "$HOME/.alOS/alOS_env/scripts/post_install.sh" >> $HOME/.xprofile # o .xinitrc mas adelante en postInstall se elimina esta ultima linea
     # TODO: discernir entre .xinitrc y .xprofile
 }
 
