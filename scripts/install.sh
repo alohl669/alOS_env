@@ -19,8 +19,8 @@ InstallBspwm () {
     mkdir $HOME/.config/bspwm/scripts/
     cp $HOME/.alOS/alOS_env/install_files/bspwm_resize $HOME/.config/bspwm/scripts/
     chmod u+x $HOME/.config/bspwm/bspwmrc
-    echo "sxhkd &" >> $HOME/.xprofile # o .xinitrc
-    echo "exec bspwm" >> $HOME/.xprofile # o .xinitrc
+    echo "sxhkd &" >> $HOME/.xinitrc # o .xprofile .xinitrc
+    echo "exec bspwm" >> $HOME/.xinitrc # o .xprofile .xinitrc
     # TODO: discernir entre .xinitrc y .xprofile
 }
 
