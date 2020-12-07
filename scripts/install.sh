@@ -33,37 +33,38 @@ InstallComptonFeh () {
     cp $HOME/.alOS/alOS_env/install_files/art/* $HOME/.alOS/pictures/
 }
 
-. /home/$USER/.alOS/alOS_env/scripts/resolution.sh
+# . /home/$USER/.alOS/alOS_env/scripts/resolution.sh
 
-InstallResolutionMSG () {
-    echo ""
-    echo "--------------------------"
-    echo "    Display Resolution"
-    echo "--------------------------"
-    echo ""
-    echo "In some virtual machines or equipment, the resolution with bspwm is not well established. We can configure it now or you can run the script yourself later if in the end it has not been properly configured"
-    echo ""
-    echo -n "Do you want to set the screen resolution now?[y/N]: "
-    read Answer
-    if [[ $Answer = [Yy] ]]; then
-        InstallResolution
-    else
-        echo ""
-        echo "--------------------------"
-        echo ""
-        echo "Ok, remember that later you can configure the resolution with the following command:"
-        echo ". $HOME/.alOS/alOS_env/scripts/resolution.sh && InstallResolution"
-        echo ""
-        echo -n "[Press ENTER to continue]: "
-        read nullvar
-    fi
-}
+# InstallResolutionMSG () {
+#     echo ""
+#     echo "--------------------------"
+#     echo "    Display Resolution"
+#     echo "--------------------------"
+#     echo ""
+#     echo "In some virtual machines or equipment, the resolution with bspwm is not well established. We can configure it now or you can run the script yourself later if in the end it has not been properly configured"
+#     echo ""
+#     echo -n "Do you want to set the screen resolution now?[y/N]: "
+#     read Answer
+#     if [[ $Answer = [Yy] ]]; then
+#         InstallResolution
+#     else
+#         echo ""
+#         echo "--------------------------"
+#         echo ""
+#         echo "Ok, remember that later you can configure the resolution with the following command:"
+#         echo ". $HOME/.alOS/alOS_env/scripts/resolution.sh && InstallResolution"
+#         echo ""
+#         echo -n "[Press ENTER to continue]: "
+#         read nullvar
+#     fi
+# }
 
 InstallRofi () {
     sudo apt-get install -y rofi
-    echo -n "Let's proceed to give a more beautiful look to rofi, read the instructions carefully and choose the theme that you like, we recommend \"android_notification by Rasi\"[ENTER to contniue]: "
-    read nullvar
-    rofi-theme-selector
+    # echo -n "Let's proceed to give a more beautiful look to rofi, read the instructions carefully and choose the theme that you like, we recommend \"android_notification by Rasi\"[ENTER to contniue]: "
+    # read nullvar
+    echo "rofi.theme: /usr/share/rofi/themes/android_notification.rasi" >> $HOME/.config/rofi/config
+    # rofi-theme-selector
 }
 
 InstallDunst () {
@@ -159,7 +160,7 @@ installHackNerdFonts () {
 InstallBspwm
 InstallComptonFeh
 # InstallResolution
-InstallResolutionMSG
+# InstallResolutionMSG
 InstallRofi
 InstallDunst
 InstallPolybar
