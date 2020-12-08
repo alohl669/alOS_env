@@ -138,7 +138,7 @@ installHackNerdFonts () {
 }
 
 InstallEnviornment () {
-    sudo apt-get install -y gdm3 mate-desktop-environment-core
+    sudo apt-get install -y sddm mate-desktop-environment-core
 }
 
 # Pide sudo
