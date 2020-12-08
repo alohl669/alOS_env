@@ -1,9 +1,11 @@
 #!/bin/bash
 SelectDM () {
+    n_writeDM=3
+    echo -e "\n------------------------------------------------------"
+    echo -e "\nSelect from the list the DM that best suits your needs"
     echo -e "\n------------------------------------------------------\n"
-    echo -e "\nSelect from the list the DM that best suits your needs\n"
-    echo -ne "\n1 - gdm3\n2 - sddm\n3 - lightdm\n4 - slim\n5 - lxdm\n[DEFAULT 1]:"
-    read n_writeDM
+    echo -ne "\n1 - gdm3\n2 - sddm\n3 - lightdm\n4 - slim\n5 - lxdm\n[DEFAULT 3]: "
+    # read n_writeDM
     case "$n_writeDM" in
         1)
             writeDM="gdm3"
@@ -26,8 +28,8 @@ SelectDM () {
             xRc=".xprofile"
         ;;
         *)
-            writeDM="gdm3"
-            xRc=".xprofile"
+            writeDM="lightdm"
+            xRc=".xinitrc"
         ;;
     esac
     
@@ -52,10 +54,15 @@ InstallBspwm () {
     mkdir $HOME/.config/bspwm/scripts/
     cp $HOME/.alOS/alOS_env/install_files/bspwm_resize $HOME/.config/bspwm/scripts/
     chmod u+x $HOME/.config/bspwm/bspwmrc
-    echo "sxhkd &" >> $HOME/$xRc # o .xinitrc
-    echo "exec bspwm" >> $HOME/$xRc # o .xinitrc
+    echo "sxhkd &" >> $HOME/$xRc # .xprofile o .xinitrc
+    echo "exec bspwm" >> $HOME/$xRc # .xprofile o .xinitrc
     echo "$HOME/.alOS/alOS_env/scripts/post_install.sh" >> $HOME/.xprofile # o .xinitrc mas adelante en postInstall se elimina esta ultima linea
     # TODO: discernir entre .xinitrc y .xprofile
+}
+
+InstallEnviornment () {
+    sudo apt-get install -y $writeDM mate-desktop-environment-core dconf-cli
+    sudo update-alternatives --install /usr/bin/x-session-manager x-session-manager $(which bspwm) 90
 }
 
 InstallComptonFeh () {
@@ -168,10 +175,6 @@ installHackNerdFonts () {
     cd /usr/local/share/fonts/
     sudo unzip Hack.zip
     sudo rm Hack.zip
-}
-
-InstallEnviornment () {
-    sudo apt-get install -y $writeDM mate-desktop-environment-core
 }
 
 # Pide sudo
