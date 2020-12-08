@@ -138,7 +138,7 @@ installHackNerdFonts () {
 }
 
 InstallEnviornment () {
-    sudo apt-get install -y lightdm mate-desktop-environment-core
+    sudo apt-get install -y slim mate-desktop-environment-core
 }
 
 # Pide sudo
