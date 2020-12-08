@@ -192,3 +192,4 @@ InstallDunst
 InstallPolybar
 InstallPolybarTheme
 installHackNerdFonts
+sudo reboot
