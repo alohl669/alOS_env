@@ -1,5 +1,5 @@
 #!/bin/bash
-selectDM () {
+SelectDM () {
     echo -e "\n------------------------------------------------------\n"
     echo -e "\nSelect from the list the DM that best suits your needs\n"
     echo -ne "\n1 - gdm3\n2 - sddm\n3 - lightdm\n4 - slim\n5 - lxdm\n[DEFAULT 1]:"
@@ -7,21 +7,27 @@ selectDM () {
     case "$n_writeDM" in
         1)
             writeDM="gdm3"
+            xRc=".xprofile"
         ;;
         2)
             writeDM="sddm"
+            xRc=".xinitrc"
         ;;
         3)
             writeDM="lightdm"
+            xRc=".xinitrc"
         ;;
         4)
             writeDM="slim"
+            xRc=".xinitrc"
         ;;
         5)
             writeDM="lxdm"
+            xRc=".xprofile"
         ;;
         *)
             writeDM="gdm3"
+            xRc=".xprofile"
         ;;
     esac
     
@@ -46,8 +52,8 @@ InstallBspwm () {
     mkdir $HOME/.config/bspwm/scripts/
     cp $HOME/.alOS/alOS_env/install_files/bspwm_resize $HOME/.config/bspwm/scripts/
     chmod u+x $HOME/.config/bspwm/bspwmrc
-    echo "sxhkd &" >> $HOME/.xprofile # o .xinitrc
-    echo "exec bspwm" >> $HOME/.xprofile # o .xinitrc
+    echo "sxhkd &" >> $HOME/$xRc # o .xinitrc
+    echo "exec bspwm" >> $HOME/$xRc # o .xinitrc
     echo "$HOME/.alOS/alOS_env/scripts/post_install.sh" >> $HOME/.xprofile # o .xinitrc mas adelante en postInstall se elimina esta ultima linea
     # TODO: discernir entre .xinitrc y .xprofile
 }
@@ -174,7 +180,8 @@ InstallEnviornment () {
 #     echo "You need to be a root(or sudo user) to install"
 #     exit
 # fi
-selectDM
+
+SelectDM
 InstallBspwm
 InstallEnviornment
 InstallComptonFeh
