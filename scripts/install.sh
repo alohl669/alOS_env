@@ -1,4 +1,31 @@
 #!/bin/bash
+selectDM () {
+    echo -e "\n------------------------------------------------------\n"
+    echo -e "\nSelect from the list the DM that best suits your needs\n"
+    echo -ne "\n1 - gdm3\n2 - sddm\n3 - lightdm\n4 - slim\n5 - lxdm\n[DEFAULT 1]:"
+    read n_writeDM
+    case "$n_writeDM" in
+        1)
+            writeDM="gdm3"
+        ;;
+        2)
+            writeDM="sddm"
+        ;;
+        3)
+            writeDM="lightdm"
+        ;;
+        4)
+            writeDM="slim"
+        ;;
+        5)
+            writeDM="lxdm"
+        ;;
+        *)
+            writeDM="gdm3"
+        ;;
+    esac
+    
+}
 InstallBspwm () {
     # Instalamos Bspwm
     echo "Installing bspwm dependencies..."
@@ -138,7 +165,7 @@ installHackNerdFonts () {
 }
 
 InstallEnviornment () {
-    sudo apt-get install -y gdm3 mate-desktop-environment-core
+    sudo apt-get install -y $writeDM mate-desktop-environment-core
 }
 
 # Pide sudo
@@ -147,7 +174,7 @@ InstallEnviornment () {
 #     echo "You need to be a root(or sudo user) to install"
 #     exit
 # fi
-
+selectDM
 InstallBspwm
 InstallEnviornment
 InstallComptonFeh
