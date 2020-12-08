@@ -6,7 +6,7 @@ echo -n "You need to install some tools. Do you want to install it?[Y/n]: "
 read installGitAnswer
 if [[ $installGitAnswer = [Yy] || $installGitAnswer = '' ]]; then
     # install basics
-    sudo apt-get install -y build-essential git net-tools
+    sudo apt-get install -y build-essential git net-tools zip
     # install xorg
     sudo apt-get install -y xorg
 else
