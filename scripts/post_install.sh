@@ -4,6 +4,9 @@
 # despues descargamos e instlamos la theme de mate que quede bien oscura para acja
 # Por ultimo instalamos la theme de rofi
 # hay que encontrar el modo de hacer el ejecutable al arranque de la session x
+# sudo apt-get install openvpn
+# sudo apt-get install net-tools
+# sudo apt-get install nmap
 systemThemeConfigure () {
     dconf write /org/mate/terminal/profiles/default/font "'Hack Nerd Font Mono 12'"
     dconf write /org/mate/terminal/profiles/default/default-show-menubar false
@@ -23,4 +26,9 @@ systemThemeConfigure () {
     echo "sxhkd &" > $HOME/.xprofile # o .xinitrc
     echo "exec bspwm" >> $HOME/.xprofile # o .xinitrc
 }
+
+. /home/$USER/.alOS/alOS_env/extra/*.sh
+installVscode
+installBat
+
 systemThemeConfigure
