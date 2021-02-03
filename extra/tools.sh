@@ -7,3 +7,7 @@ function installFileManager () {
     # Gestor de archivos(zip, war, rar, tar..)
     sudo apt-get install -y engrampa
 }
+function installNotepad () {
+    # Gestor de archivos(zip, war, rar, tar..)
+    sudo apt-get install -y pluma
+}

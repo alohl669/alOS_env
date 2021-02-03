@@ -31,5 +31,6 @@ systemThemeConfigure () {
 installVscode
 installBat
 installFileManager
+installNotepad
 
 systemThemeConfigure
