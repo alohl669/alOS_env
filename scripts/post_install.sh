@@ -30,5 +30,6 @@ systemThemeConfigure () {
 . /home/$USER/.alOS/alOS_env/extra/*.sh
 installVscode
 installBat
+installFileManager
 
 systemThemeConfigure

@@ -3,3 +3,7 @@ function installBat () {
     wget https://github.com/sharkdp/bat/releases/download/v0.17.1/bat_0.17.1_amd64.deb
     dpkg -i bat_0.17.1_amd64.deb
 }
+function installFileManager () {
+    # Gestor de archivos(zip, war, rar, tar..)
+    sudo apt-get install -y engrampa
+}
