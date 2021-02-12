@@ -32,5 +32,6 @@ installVscode
 installBat
 installFileManager
 installNotepad
+installFilezilla
 
 systemThemeConfigure

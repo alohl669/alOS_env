@@ -17,7 +17,8 @@ function listaHerramientas () {
         1 "bat(advanced cat)" on
         2 "engrampa(file manager)" on
         3 "pluma(notepad)" on
-        4 "vscode" on)
+        4 "vscode" on
+        5 "filezilla" on)
     listaApps=$("${listaAplicaciones[@]}" "${listaOpciones[@]}" 2>&1 >/dev/tty)
 
     clear
@@ -36,6 +37,9 @@ function listaHerramientas () {
         ;;
         4)
         echo "Escogiste la opción 4"
+        ;;
+        5)
+        echo "Escogiste la opción 5"
         ;;
         esac
     done

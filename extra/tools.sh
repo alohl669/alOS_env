@@ -11,3 +11,7 @@ function installNotepad () {
     # Gestor de archivos(zip, war, rar, tar..)
     sudo apt-get install -y pluma
 }
+function installFilezilla () {
+    # Gestor de archivos(zip, war, rar, tar..)
+    sudo apt-get install -y filezilla
+}
