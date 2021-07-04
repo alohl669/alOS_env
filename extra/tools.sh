@@ -1,8 +1,8 @@
 function installBat () {
     vpwd=$PWD
     cd /tmp/
-    wget https://github.com/sharkdp/bat/releases/download/v0.17.1/bat_0.17.1_amd64.deb
-    sudo dpkg -i bat_0.17.1_amd64.deb
+    wget https://github.com/sharkdp/bat/releases/download/v0.18.1/bat_0.18.1_amd64.deb
+    sudo dpkg -i bat_0.18.1_amd64.deb
     cd $vpwd
 }
 function installBrave () {
