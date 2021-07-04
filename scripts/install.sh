@@ -154,8 +154,8 @@ InstallPolybarTheme () {
     # sed -i "s|usuario|$USER|g" config.ini
     # mv $HOME/.config/bin/usuario.sh $HOME/.config/bin/$USER.sh
     # sed -i "s|usuario|$USER|g" $HOME/.config/bin/$USER.sh
-    ethIface=$(/usr/sbin/ifconfig | sed -n 1p | cut -d ":" -f 1)
-    sed -i "s|ETHIFACE|$ethIface|g" $HOME/.config/bin/ethernet_status.sh
+    # ethIface=$(/usr/sbin/ifconfig | sed -n 1p | cut -d ":" -f 1)
+    # sed -i "s|ETHIFACE|$ethIface|g" $HOME/.config/bin/ethernet_status.sh
 
     echo ""
     echo "We have installed our own theme modification for the polybar, if you want to change its appearance you can use the following link"
