@@ -1,7 +1,11 @@
 #!/bin/bash
+
+ALOS_HOME=$HOME/.alOS
+ALOS_PATH=$HOME/.alOS/bin #extra se queda colgado por ahora post_install.sh
+
 cd $HOME  
 mkdir -p $HOME/.alOS/pictures
-cd $HOME/.alOS
+cd $ALOS_HOME
 echo -n "You need to install some tools. Do you want to install it?[Y/n]: "
 read installGitAnswer
 if [[ $installGitAnswer = [Yy] || $installGitAnswer = '' ]]; then
@@ -14,5 +18,7 @@ else
     exit 1
 fi
 git clone https://github.com/alohl669/alOS_env.git
-cd $HOME/.alOS/alOS_env/scripts/
+cp -R $ALOS_HOME/alOS_env/* $ALOS_HOME/
+rm -rf $ALOS_HOME/alOS_env
+cd $ALOS_PATH
 . install.sh

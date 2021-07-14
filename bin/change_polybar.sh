@@ -24,14 +24,14 @@ ChangePolybar () {
         chmod +x $HOME/.config/polybar/launch.sh
         $HOME/.config/polybar/launch.sh
     else
-        cd $HOME/.alOS/alOS_env/install_files/polybar
+        cd $ALOS_HOME/install_files/polybar
         cp -r fonts/* $HOME/.local/share/fonts
         fc-cache -v
         cp -r * $HOME/.config/polybar
         chmod +x $HOME/.config/polybar/launch.sh
 
-        cp -r $HOME/.alOS/alOS_env/install_files/bin $HOME/.config/
-        cp -r $HOME/.alOS/alOS_env/install_files/polybar $HOME/.config/
+        cp -r $ALOS_HOME/install_files/bin $HOME/.config/
+        cp -r $ALOS_HOME/install_files/polybar $HOME/.config/
         # SED
         # -- modulo de usuario
         cd $HOME/.config/polybar

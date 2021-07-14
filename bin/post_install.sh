@@ -27,7 +27,7 @@ systemThemeConfigure () {
     echo "exec bspwm" >> $HOME/.xprofile # o .xinitrc
 }
 
-. /home/$USER/.alOS/alOS_env/extra/*.sh
+. $ALOS_PATH/extra/*.sh
 installVscode
 installBat
 installFileManager

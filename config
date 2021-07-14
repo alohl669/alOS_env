@@ -1,0 +1,8 @@
+# [SelectDM]
+# n_writeDM=3 # variable para el case[deprecados]
+writeDM="lightdm"
+xRc=".xinitrc"
+installTerminal="mate-terminal"
+#installTerminal="gnome-terminal"
+fileExplorer="caja"
+#fileExplorer="nautilus"

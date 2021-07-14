@@ -1,5 +1,6 @@
 #!/bin/bash
 # Trackpad haptic compatibility(Tested on ubuntu 20.04.2)
+function InstallTrackpad () {
 sudo cat>/usr/share/X11/xorg.conf.d/69-nice.conf<<EOF
 Section "InputClass"
     Identifier "touchpad overrides"
@@ -10,3 +11,4 @@ Section "InputClass"
     Option "Tapping" "true"
 EndSection
 EOF
+}

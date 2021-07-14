@@ -3,7 +3,7 @@
 InstallResolution () {
     # En algunas maquinas virtuales o equipos no se establece bien la resolución con bspwm
     # Podemos configurarlo ahora o puedes ejcutar tu mismo el script mas adelante
-    #  . /home/$USER/.alOS/alOS_env/scripts/resolution.sh && InstallResolution
+    #  . $ALOS_PATH/resolution.sh && InstallResolution
     echo "Selecting the monitor resolution..."
     varDisplay=$(xrandr -q | sed -n 2p | cut -d " " -f 1)
     xrandr -q
